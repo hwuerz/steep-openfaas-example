@@ -1,0 +1,13 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  example-function:
+    lang: java11-steep
+    handler: ./example-function
+    image: hwuerz/example-function:latest
+configuration:
+  templates:
+    - name: java11-steep
+      source: https://github.com/hwuerz/templates
